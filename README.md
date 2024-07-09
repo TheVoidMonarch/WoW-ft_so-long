@@ -86,47 +86,59 @@ Here's a simplified example of how you might structure your project with header 
 
 ### Project Management:
 
-Task 1: Setting up the project structure
+### Task 1: Setting up the project structure
 
 Create a new project directory and create the necessary subdirectories for each component (e.g., src, include, assets, etc.).
 Create the necessary header files (.h) and source files (.c) according to your provided structure.
-Task 2: Defining game structures and function prototypes
+
+### Task 2: Defining game structures and function prototypes
 
 In game.h, define the game-wide structures (e.g., Game, Room, Player, etc.) and core function prototypes (e.g., init_game, update_game, render_game, etc.).
 In each respective header file (e.g., player.h, boss.h, puzzle.h, etc.), define the corresponding structures and function prototypes.
-Task 3: Implementing initialization functions
+
+### Task 3: Implementing initialization functions
 
 In init.c, implement the initialization functions for game entities (e.g., init_game, init_player, init_boss, etc.).
-Task 4: Implementing rendering functions
+
+### Task 4: Implementing rendering functions
 
 In render.c, implement the rendering functions (e.g., render_game, render_player, render_boss, etc.) using MiniLibX.
-Task 5: Handling user input
+
+### Task 5: Handling user input
 
 In input.c, implement functions for handling user input (e.g., handle_input, handle_player_input, etc.).
-Task 6: Updating game state
+
+### Task 6: Updating game state
 
 In update.c, implement update functions (e.g., update_game, update_player, update_boss, etc.) based on user input and time.
-Task 7: Implementing boss and puzzle mechanics
+
+### Task 7: Implementing boss and puzzle mechanics
 
 In boss.c, implement boss behavior, attacks, and Dead Man's Volley mechanics.
 In puzzle.c, implement puzzle solving mechanics.
-Task 8: Room management
+
+### Task 8: Room management
 
 In rooms.c, define different room types (e.g., ROOM_PUZZLE, ROOM_BOSS, etc.) and their initialization.
 Handle room transitions and interactions.
-Task 9: Player actions and inventory
+
+### Task 9: Player actions and inventory
 
 In player.c, implement player movement, actions (attacking, interacting), inventory handling, and hotkey healing.
-Task 10: Item spawning
+
+### Task 10: Item spawning
 
 In spawn.c, implement functions for spawning items or enemies.
-Task 11: Map management
+
+### Task 11: Map management
 
 In maps.c, load and manage game maps or levels.
-Task 12: User interface
+
+### Task 12: User interface
 
 In ui.c, implement UI elements such as health bars, dialog boxes, and inventory displays.
-Task 13: Camera and viewport management
+
+### Task 13: Camera and viewport management
 
 In camera.c, implement camera movement and viewport management functions for scrolling and maintaining focus.
 
