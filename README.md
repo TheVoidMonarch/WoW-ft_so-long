@@ -19,6 +19,32 @@
 13. **ui.c** - Implementation of user interface elements (health bars, dialog boxes, etc.).
 14. **camera.c** - Managing camera movement and viewports.
 
+### Header Files Needed:
+
+Here's a simplified example of how you might structure your project with header files for each `.c` file:
+
+- **game.h**: Main header file defining game-wide structures (`Game`, `Room`, `Player`, etc.) and core function prototypes (`init_game`, `update_game`, `render_game`, etc.).
+
+- **player.h**: Header file defining player-related structures (`Player`, `Inventory`, etc.) and function prototypes (`init_player`, `update_player`, `handle_player_input`, etc.).
+
+- **boss.h**: Header file defining boss-related structures (`Boss`, `BossAttack`, etc.) and function prototypes (`init_boss`, `update_boss`, `handle_boss_room`, etc.).
+
+- **puzzle.h**: Header file defining puzzle-related structures (`Puzzle`, `Button`, etc.) and function prototypes (`init_puzzle`, `handle_puzzle_room`, etc.).
+
+- **room.h**: Header file defining room-related structures (`Room`, `Door`, etc.) and function prototypes (`init_room`, `handle_room_events`, etc.).
+
+- **render.h**: Header file defining rendering-related function prototypes (`render_game`, `render_player`, `render_boss`, `render_ui`, etc.).
+
+- **input.h**: Header file defining input-related function prototypes (`handle_input`, `handle_player_input`, `handle_puzzle_input`, etc.).
+
+- **spawn.h**: Header file defining spawning-related function prototypes (`spawn_key`, `spawn_enemy`, etc.).
+
+- **maps.h**: Header file defining map-related function prototypes (`load_map`, `generate_map`, etc.).
+
+- **ui.h**: Header file defining UI-related structures (`UIElement`, `DialogBox`, `HealthBar`, etc.) and function prototypes (`render_dialog`, `render_health_bar`, etc.).
+
+- **camera.h**: Header file defining camera-related structures (`Camera`, `Viewport`, etc.) and function prototypes (`update_camera`, `set_camera_position`, etc.).
+
 ### Concepts and Features:
 
 1. **Game Initialization and Structures**:
