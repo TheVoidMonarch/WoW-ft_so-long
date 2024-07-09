@@ -69,3 +69,132 @@
 
 - **Dialog System**: Implement dialog boxes or text displays within `ui.c` or a dedicated file for managing dialogs.
 - **Inventory System**: Simplify as a hotkey healing feature in `player.c`, eliminating the need for a separate inventory system.
+
+### Evaluation Conditions
+MANDATORY PART
+--------------
+
+Executable name
+---------------
+Check that the project compiles well (without re-link) when you execute
+the `make` command and that the executable name is `so_long`.
+If not use the invalid compilation flag at the end of the scale.
+
+Map reading
+-----------
+- use different maps.
+- test with different sizes.
+- test with different line sizes.
+
+Also, check that the program returns an error and exits properly when
+the configuration file is misconfigured (for example an unknown key,
+double keys, an invalid path..).
+
+If not, the defense is over and use the appropriate flag incomplete
+work, crash...
+
+Technical elements of the display
+---------------------------------
+We're going to evaluate the technical elements of the display.
+Check that the level is a valid representation of the map used as
+parameter.
+- A window must open at the launch of the program.
+It must stay open during the whole execution.
+
+- Hide all or part of the window either by using another window
+or by using the screen's borders, then minimize the windows
+and maximize it back. In all cases, the content of the window
+must remain consistent.
+
+User basic events
+-----------------
+In this section, we're going to evaluate the program's user
+generated events. Execute the 3 following tests. If at least one
+fails, this means that no points will be awarded for this section.
+
+Move to the next one.
+---------------------
+- Click the red cross at the top left of the window. The
+window must close and the program must exit cleanly.
+
+- Press the ESC key. The window must close and the program
+must exit cleanly. In the case of this test, we will accept
+that another key exits the program, for example, Q.
+
+- Press the four arrow keys (we'll accept WASD or ZQSD keys)
+in the order of your liking. Each key press must render a
+visible result on the window(player's movement).
+
+Movements
+---------
+In this section, we'll evaluate the implementation of the player's
+movement. Execute the 5 following tests. If at least one fails, this
+means that no points will be awarded for this section.
+
+Move to the next one.
+---------------------
+- The player's spawning position must be in accordance with the map file.
+
+- Press the arrows keys to move in every direction on the map.
+
+- is the game "playable"?
+
+Walls & Sprites
+---------------
+In this section, we'll evaluate the map representation.
+Execute the following tests. If at least one
+fails, this means that no points will be awarded for this section.
+
+Move to the next one.
+---------------------
+- The wall's texture is well placed and the player cannot go through it.
+
+- The collectible's texture is well placed and the player can pick it by
+  walking on it.
+
+- The Exit texture is well placed and the player can finish the game by
+  walking on it but only after picking every collectible.
+
+- The player texture is well placed and can move in every direction
+  except into the walls.
+
+Counter
+-------
+In this section, we'll evaluate the gameplay elements.
+Execute the following tests. If at least one
+fails, this means that no points will be awarded for this section.
+Move to the next one.
+
+- There's a small counter displayed on the shell that counts how many
+  movements the player did.
+- The counter can be displayed directly on the game screen (see bonus
+  part).
+
+Image usage
+-----------
+The program use mlx_put_image_to_window and not mlx put pixel!
+
+
+BONUS
+-----
+We will look at your bonuses if and only if your mandatory part is
+excellent. This means that you must complete the mandatory part,
+beginning to end, and your error management must be flawless, even in
+cases of twisted or bad usage. So if the mandatory part didn't score all
+the points during this defense bonuses will be totally ignored.
+
+Enemies
+-------
+enemy patrols that cause the player to lose in case of contact.
+
+Draw calls
+----------
+There's some sprite animation.
+You need to explain what it is and how you did it.
+Rate it from 0 (failed) through 5 (excellent)
+
+GUI
+---
+The counter of movement is rendered on the screen using texture or
+mlx_string_put.
+
