@@ -81,7 +81,7 @@ typedef struct
 } Game;
 
 void init_game(Game *game);
-void update_game(Game *game, float delta_time);
+void update_game(void *mlx);
 void render_game(const Game *game);
 void handle_input(Game *game, char input);
 void cleanup_game(Game *game);
