@@ -10,6 +10,7 @@ typedef struct Boss Boss;
 typedef struct Button Button;
 typedef struct Puzzle Puzzle;
 typedef struct Room Room;
+typedef struct Camera camera;
 
 #define SCREEN_WIDTH 240
 #define SCREEN_HEIGHT 160
@@ -24,8 +25,10 @@ typedef enum
 
 struct GameObject
 {
-	int x, y;
-	int width, height;
+	int x;
+	int y;
+	int width;
+	int height;
 };
 
 struct Player
@@ -73,11 +76,28 @@ struct Room
 
 typedef struct
 {
+	int x;
+	int y;
+	int width;
+	int height;
+	int min_x;
+	int min_y;
+	int max_x;
+	int max_y;
+	bool is_moving;
+	float speed;
+	GameObject *target;
+	float zoom;
+}Camera;
+
+typedef struct
+{
 	Player *player;
 	Button *buttons;
 	Room *rooms;
 	RoomType current_room;
 	bool key_collected;
+	Camera *camera_state;
 } Game;
 
 void init_game(Game *game);
@@ -86,4 +106,4 @@ void render_game(const Game *game);
 void handle_input(Game *game, char input);
 void cleanup_game(Game *game);
 
-#endif
+#endif;
