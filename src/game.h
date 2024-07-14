@@ -1,16 +1,22 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <stdbool.h>
 #include <stddef.h>
 
+typedef enum
+{
+	false,
+	true
+} bool;
+
+// Forward declarations
 typedef struct GameObject GameObject;
 typedef struct Player Player;
 typedef struct Boss Boss;
 typedef struct Button Button;
 typedef struct Puzzle Puzzle;
 typedef struct Room Room;
-typedef struct Camera camera;
+typedef struct Camera Camera;
 
 #define SCREEN_WIDTH 240
 #define SCREEN_HEIGHT 160
@@ -74,21 +80,21 @@ struct Room
 	void *background_img;
 };
 
-typedef struct
+struct Camera
 {
-	int x;
-	int y;
-	int width;
-	int height;
-	int min_x;
-	int min_y;
-	int max_x;
-	int max_y;
-	bool is_moving;
-	float speed;
-	GameObject *target;
-	float zoom;
-}Camera;
+	int x;				// Current x position of the camera (top-left corner)
+	int y;				// Current y position of the camera (top-left corner)
+	int width;			// Width of the camera view
+	int height;			// Height of the camera view
+	int min_x;			// Minimum x boundary
+	int min_y;			// Minimum y boundary
+	int max_x;			// Maximum x boundary
+	int max_y;			// Maximum y boundary
+	bool is_moving;		// Flag to check if the camera is moving
+	float speed;		// Speed of the camera movement
+	GameObject *target; // Target for the camera to follow (e.g., player)
+	float zoom;			// Zoom level of the camera
+};
 
 typedef struct
 {
@@ -101,9 +107,13 @@ typedef struct
 } Game;
 
 void init_game(Game *game);
+
 void update_game(void *mlx);
+
 void render_game(const Game *game);
+
 void handle_input(Game *game, char input);
+
 void cleanup_game(Game *game);
 
-#endif;
+#endif // GAME_H
