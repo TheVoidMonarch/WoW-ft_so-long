@@ -3,6 +3,40 @@
 
 #include <stddef.h>
 
+#define WALL		'1'
+#define FLOOR		'0'
+#define COINS		'C'
+#define PLAYER		'P'
+#define MAP_EXIT	'E'
+
+#define KEY_W		119
+#define KEY_A		97
+#define KEY_S		115
+#define KEY_D		100
+
+#define KEY_UP		65362
+#define KEY_LEFT	65361
+#define KEY_RIGHT	65363
+#define KEY_DOWN	65364
+
+#define KEY_Q		113
+#define KEY_ESC		65307
+
+#define FRONT		1
+#define LEFT		2
+#define RIGHT		3
+#define BACK		4
+
+#define ROOM1_XPM "Assets/Map1.xpm"
+#define ROOM2_XPM "Assets/Map2.xpm"
+#define COINS_XPM "Assets/Map3.xpm"
+#define PLAYER_FRONT_XPM "assets/sprites/player/front.xpm"
+#define PLAYER_LEFT_XPM "assets/sprites/player/left.xpm"
+#define PLAYER_RIGHT_XPM "assets/sprites/player/right.xpm"
+#define PLAYER_BACK_XPM "assets/sprites/player/back.xpm"
+#define OPEN_EXIT_XPM "assets/sprites/open-exit.xpm"
+#define EXIT_CLOSED_XPM "assets/sprites/exit-closed.xpm"
+
 typedef enum
 {
 	false,
